@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hanjin() {
-    alert('lijingaiiii');
-  }
-  title = 'lijing-app';
+  title = 'lijing-app Tour of Heroes';
   name = 'lijing';
 }

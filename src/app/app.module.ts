@@ -6,7 +6,9 @@ import { LijingSecondComponent } from './a/b/c/lijing-second/lijing-second.compo
 import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component'; // <-- NgModel lives here
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 @NgModule({
   // 项目中使用组件的声明
   declarations: [
@@ -15,9 +17,10 @@ import { MessagesComponent } from './messages/messages.component'; // <-- NgMode
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
+    DashboardComponent,
   ],
   // 引用的第三方库
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   // 与整个 app 生命周期关联的服务（service）
   providers: [],
   // 启动时最先访问的组件

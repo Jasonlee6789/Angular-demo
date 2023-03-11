@@ -13,23 +13,22 @@ export class HeroesComponent implements OnInit {
   // onSelectHero(_t5: Hero) {
   //   throw new Error('Method not implemented.');
   // }
-  selectedHero?: Hero;
+  //selectedHero?: Hero;
 
   // hero = 'Windstorm';
   //heroes = HEROES;
   heroes: Hero[] = [];
   constructor(
-    private heroService: HeroService,
-    private messageService: MessageService
+    private heroService: HeroService // private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
     this.getHeroes();
   }
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  // }
   getHeroes(): void {
     // this.heroes = this.heroService.getHeroes();
     this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
